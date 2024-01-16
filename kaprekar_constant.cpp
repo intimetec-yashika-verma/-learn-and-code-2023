@@ -32,7 +32,8 @@ int findDifference(int number) {
 
     int ascendingNumber = std::stoi(ascendingNumString);
     int dscendingNumber = std::stoi(descendingNumString);
-
+    
+    int difference =dscendingNumber - ascendingNumber;
     return dscendingNumber - ascendingNumber;
 }
 
@@ -44,6 +45,6 @@ int findStepsForKaprekarConstant(int initialNumber) {
         currentNumber = findDifference(currentNumber);
         steps++;
     }
-
-    return currentNumber == 6174 ? steps : -1;
+    int stepsCount = currentNumber == 6174 ? steps : -1;
+    return stepsCount;
 }
